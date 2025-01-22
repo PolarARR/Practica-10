@@ -1,1 +1,33 @@
-/*# sourceMappingURL=main.css.map */
+body {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: RGB(210, 211, 207);
+  margin: 0;
+  padding: 0 50px;
+  width: 100%;
+}
+header section img {
+  width: 24px;
+  height: 24px;
+}
+header section img.header__logo {
+  width: 72px;
+  height: 72px;
+}
+header section.header__icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}/*# sourceMappingURL=main.css.map */

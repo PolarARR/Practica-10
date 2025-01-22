@@ -1,6 +1,30 @@
 @import "./base";
 body {
-    @extend %default-font;
-    margin: 20px;
+    @extend %defaultFont;
     box-sizing: border-box;
+}
+
+header {
+    @include flex-display(row, space-between, center);
+    background-color: RGB(210, 211, 207);
+    margin: 0;
+    padding: 0 50px;
+    width: 100%;
+
+    section {
+        img {
+            width: 24px;
+            height: 24px;
+
+            &.header__logo {
+                width: 72px;
+                height: 72px;
+            }
+        }
+
+        &.header__icons {
+            @include flex-display(row, space-between, center);
+            gap: 20px;
+        }
+    }
 }
