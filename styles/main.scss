@@ -12,19 +12,23 @@ header {
     width: 100%;
 
     section {
+        &.header__icons {
+            @include flex-display(row, space-between, center);
+            gap: 20px;
+        }
+
         img {
-            width: 24px;
-            height: 24px;
+            &.header__img {
+                width: 24px;
+                height: 24px;
+                @include hover;
+                @include active;
+            }
 
             &.header__logo {
                 width: 72px;
                 height: 72px;
             }
-        }
-
-        &.header__icons {
-            @include flex-display(row, space-between, center);
-            gap: 20px;
         }
     }
 }
