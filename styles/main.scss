@@ -32,3 +32,17 @@ header {
         }
     }
 }
+
+main {
+    .banner {
+        height: 336px;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-size:cover;
+
+        img {
+            width: 100%;
+            height: 336px;
+        }
+    }
+}

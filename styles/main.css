@@ -39,4 +39,15 @@ header section img.header__img:active {
 header section img.header__logo {
   width: 72px;
   height: 72px;
+}
+
+main .banner {
+  height: 336px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main .banner img {
+  width: 100%;
+  height: 336px;
 }/*# sourceMappingURL=main.css.map */
