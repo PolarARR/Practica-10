@@ -1,5 +1,7 @@
 $background: rgb(210, 211, 207);
 
+$cardsBackground: rgb(173, 234, 234);
+
 %defaultFont {
     font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
@@ -11,17 +13,37 @@ $background: rgb(210, 211, 207);
     align-items: $align;
 }
 
-@mixin hover {
-    @media (hover: hover) {
-        &:hover {
-            transform: scale(1.1);
-            cursor: pointer;
+@mixin hover ($type){
+    @if $type == true {
+        @media (hover: hover) {
+            &:hover {
+                transform: scale(1.03);
+                cursor: pointer;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+        }
+    }
+
+    @else {
+        @media (hover: hover) {
+            &:hover {
+                transform: scale(1.1);
+                cursor: pointer;
+            }
         }
     }
 }
 
-@mixin active {
-    &:active {
-        transform: scale(0.9);
+@mixin active ($type){
+    @if $type == true {
+        &:active {
+            transform: scale(0.97);
+        }
+    }
+
+    @else {
+        &:active {
+            transform: scale(0.9);
+        }
     }
 }

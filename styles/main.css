@@ -44,12 +44,12 @@ header section img.header__logo {
 main .banner {
   height: 336px;
   overflow: hidden;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 main .banner img {
   width: 100%;
   height: 336px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 main .filter {
   display: flex;
@@ -59,4 +59,46 @@ main .filter {
   gap: 20px;
   padding: 15px 0;
   background-color: rgb(210, 211, 207);
+}
+main h2 {
+  margin: 60px auto 35px auto;
+  text-align: center;
+}
+main .products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 35px;
+  margin: 0 60px;
+  box-sizing: border-box;
+}
+main .products article {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+main .products div.card {
+  height: 400px;
+}
+@media (hover: hover) {
+  main .products div.card:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}
+main .products div.card:active {
+  transform: scale(0.97);
+}
+main .products div.card-body {
+  background-color: rgb(173, 234, 234);
+}
+main .products div p {
+  text-align: center;
+}
+main .products div img {
+  width: 100%;
+  height: 286px;
+  padding: 10px;
+  box-sizing: border-box;
 }/*# sourceMappingURL=main.css.map */

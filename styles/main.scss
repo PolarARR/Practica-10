@@ -21,8 +21,8 @@ header {
             &.header__img {
                 width: 24px;
                 height: 24px;
-                @include hover;
-                @include active;
+                @include hover (false);
+                @include active (false);
             }
 
             &.header__logo {
@@ -37,12 +37,11 @@ main {
     .banner {
         height: 336px;
         overflow: hidden;
-        background-repeat: no-repeat;
-        background-size:cover;
 
         img {
             width: 100%;
             height: 336px;
+            object-fit: cover;
         }
     }
 
@@ -51,5 +50,45 @@ main {
         gap: 20px;
         padding: 15px 0;
         background-color:$background;
+    }
+
+    h2 {
+        margin: 60px auto 35px auto;
+        text-align: center;
+    }
+
+    .products {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+        gap: 35px;
+        margin: 0 60px;
+        box-sizing: border-box;
+
+        article {
+            @include flex-display(row, center, center);
+        }
+                
+        div {
+            &.card {
+                height: 400px;
+                @include hover (true);
+                @include active (true);
+            }
+
+            &.card-body {
+                background-color: $cardsBackground;
+            }
+
+            p {
+                text-align: center;
+            }
+
+            img {
+                width: 100%;
+                height: 286px;
+                padding: 10px;
+                box-sizing: border-box;
+            }
+        }
     }
 }
