@@ -61,7 +61,7 @@ main {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
         gap: 35px;
-        margin: 60px 60px;
+        margin: 60px;
         box-sizing: border-box;
 
         article {
@@ -131,7 +131,7 @@ footer {
             article {
                 @include flex-display(column, flex-start, flex-start);
                 width: 25%;
-                gap: 10px;
+                gap: 20px;
                 font-size: 14px;
                 white-space: nowrap;
                 box-sizing: border-box;
