@@ -1,0 +1,52 @@
+$background: rgb(210, 211, 207);
+
+$cardsBackground: rgb(173, 234, 234);
+
+$borderColor:#6c757d;
+
+%defaultFont {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+@mixin flex-display ($direction, $justify, $align){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin hover ($type){
+    @if $type == true {
+        @media (hover: hover) {
+            &:hover {
+                transform: scale(1.03);
+                cursor: pointer;
+                transition-delay: 0.05s;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+        }
+    }
+
+    @else {
+        @media (hover: hover) {
+            &:hover {
+                transform: scale(1.1);
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@mixin active ($type){
+    @if $type == true {
+        &:active {
+            transform: scale(0.97);
+        }
+    }
+
+    @else {
+        &:active {
+            transform: scale(0.9);
+        }
+    }
+}
