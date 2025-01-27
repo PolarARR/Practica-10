@@ -2,6 +2,8 @@ $background: rgb(210, 211, 207);
 
 $cardsBackground: rgb(173, 234, 234);
 
+$borderColor:#6c757d;
+
 %defaultFont {
     font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
@@ -19,6 +21,7 @@ $cardsBackground: rgb(173, 234, 234);
             &:hover {
                 transform: scale(1.03);
                 cursor: pointer;
+                transition-delay: 0.05s;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1);
             }
         }
