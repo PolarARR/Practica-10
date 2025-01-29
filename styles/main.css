@@ -61,6 +61,14 @@ main .filter {
   padding: 15px 0;
   background-color: rgb(210, 211, 207);
 }
+@media screen and (max-width: 60rem) {
+  main .filter article {
+    display: none;
+  }
+}
+main .filter article.filter__media {
+  display: flex;
+}
 main h2 {
   margin: 60px auto 35px auto;
   text-align: center;

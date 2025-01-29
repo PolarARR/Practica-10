@@ -52,6 +52,16 @@ main {
         gap: 20px;
         padding: 15px 0;
         background-color:$background;
+
+        article {
+            @include secondMedia {
+                display: none;
+            }
+
+            &.filter__media {
+                display: flex;
+            }
+        }
     }
 
     h2 {
