@@ -53,20 +53,20 @@ main {
         padding: 15px 0;
         background-color:$background;
 
+        .filter__media {
+            display: none;
+            @include secondMedia {
+                display: flex;
+            }
+        }
+
+        .filter__media--secondary {
+            display: flex;
+        }
+
         article {
             @include secondMedia {
                 display: none;
-            }
-
-            &.filter__media {
-                display: none;
-                @include secondMedia {
-                    display: flex;
-                }
-            }
-
-            &.filter__media--secondary {
-                display: flex;
             }
 
             .btn-group {

@@ -61,21 +61,21 @@ main .filter {
   padding: 15px 0;
   background-color: rgb(210, 211, 207);
 }
+main .filter .filter__media {
+  display: none;
+}
+@media screen and (max-width: 60rem) {
+  main .filter .filter__media {
+    display: flex;
+  }
+}
+main .filter .filter__media--secondary {
+  display: flex;
+}
 @media screen and (max-width: 60rem) {
   main .filter article {
     display: none;
   }
-}
-main .filter article.filter__media {
-  display: none;
-}
-@media screen and (max-width: 60rem) {
-  main .filter article.filter__media {
-    display: flex;
-  }
-}
-main .filter article.filter__media--secondary {
-  display: flex;
 }
 main .filter article .btn-group a {
   background-color: #6c757d;
