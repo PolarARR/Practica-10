@@ -67,7 +67,23 @@ main .filter {
   }
 }
 main .filter article.filter__media {
+  display: none;
+}
+@media screen and (max-width: 60rem) {
+  main .filter article.filter__media {
+    display: flex;
+  }
+}
+main .filter article.filter__media--secondary {
   display: flex;
+}
+main .filter article .btn-group a {
+  background-color: #6c757d;
+  border: #6c757d;
+}
+main .filter article .btn-group a.active {
+  background-color: rgb(94, 178, 149);
+  border: rgb(94, 178, 149);
 }
 main h2 {
   margin: 60px auto 35px auto;

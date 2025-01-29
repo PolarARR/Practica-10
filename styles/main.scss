@@ -59,7 +59,26 @@ main {
             }
 
             &.filter__media {
+                display: none;
+                @include secondMedia {
+                    display: flex;
+                }
+            }
+
+            &.filter__media--secondary {
                 display: flex;
+            }
+
+            .btn-group {
+                a {
+                    background-color: $borderColor;
+                    border: $borderColor;
+
+                    &.active {
+                        background-color: $btnColor;
+                        border: $btnColor;
+                    }
+                }
             }
         }
     }
