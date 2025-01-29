@@ -8,6 +8,11 @@ $borderColor:#6c757d;
     font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 
+@mixin grid-display ($min, $max){
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax($min, $max));
+}
+
 @mixin flex-display ($direction, $justify, $align){
     display: flex;
     flex-direction: $direction;

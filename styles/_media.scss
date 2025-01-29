@@ -1,0 +1,3 @@
+@mixin firstMedia {
+    @media screen and (max-width:88rem) { @content; }
+}

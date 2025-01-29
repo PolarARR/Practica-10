@@ -4,6 +4,7 @@ body {
 
 body {
   box-sizing: border-box;
+  font-size: 16px;
 }
 
 header {
@@ -141,6 +142,12 @@ footer nav section {
   box-sizing: border-box;
   padding-top: 10px;
 }
+@media screen and (max-width: 88rem) {
+  footer nav section {
+    white-space: wrap;
+    height: 600px;
+  }
+}
 footer nav section article {
   display: flex;
   flex-direction: column;
@@ -151,4 +158,26 @@ footer nav section article {
   font-size: 14px;
   white-space: nowrap;
   box-sizing: border-box;
+}
+@media screen and (max-width: 88rem) {
+  footer nav section article {
+    white-space: wrap;
+    width: 100%;
+    min-width: 169px;
+    padding: 25px;
+  }
+}
+@media screen and (max-width: 88rem) {
+  footer nav section article.footer__social {
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-around;
+  }
+}
+@media screen and (max-width: 88rem) {
+  footer nav section article h5 {
+    white-space: wrap;
+  }
 }/*# sourceMappingURL=main.css.map */

@@ -1,7 +1,9 @@
 @import "./base";
+@import "./media";
 body {
     @extend %defaultFont;
     box-sizing: border-box;
+    font-size: 16px;
 }
 
 header {
@@ -58,8 +60,7 @@ main {
     }
 
     .products {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+        @include grid-display(270px, 1fr);
         gap: 35px;
         margin: 60px;
         box-sizing: border-box;
@@ -127,6 +128,10 @@ footer {
             @include flex-display(column, flex-start, center);
             box-sizing: border-box;
             padding-top: 10px;
+            @include firstMedia {
+                white-space: wrap;
+                height: 600px;
+            }        
 
             article {
                 @include flex-display(column, flex-start, flex-start);
@@ -135,6 +140,25 @@ footer {
                 font-size: 14px;
                 white-space: nowrap;
                 box-sizing: border-box;
+                @include firstMedia {
+                    white-space: wrap;
+                    width: 100%;
+                    min-width: 169px;
+                    padding: 25px;
+                }    
+                
+                &.footer__social {
+                    @include firstMedia {
+                        white-space: nowrap;
+                        @include flex-display(column, center, space-around);
+                    }            
+                }
+
+                h5 {
+                    @include firstMedia {
+                        white-space: wrap;
+                    }
+                }
             }
         }
     }
