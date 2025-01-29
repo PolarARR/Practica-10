@@ -93,9 +93,17 @@ main {
         gap: 35px;
         margin: 60px;
         box-sizing: border-box;
+        @include thirdMedia {
+            margin: 0 30px;
+            @include grid-display(200px, 1fr);
+        }
 
         article {
             @include flex-display(row, center, center);
+            @include thirdMedia {
+                width: 200px;
+                margin: 0 auto ;
+            }
         }
                 
         div {
@@ -103,6 +111,9 @@ main {
                 height: 400px;
                 @include hover (true);
                 @include active (true);
+                @include thirdMedia {
+                    height: 320px;
+                }
             }
 
             &.card-body {
@@ -118,6 +129,9 @@ main {
                 height: 286px;
                 padding: 10px;
                 box-sizing: border-box;
+                @include thirdMedia {
+                    height: 200px;
+                }
             }
         }
     }
@@ -126,6 +140,9 @@ main {
 footer {
     background-color: $background;
     border-top: $borderColor 3px solid;
+    @include thirdMedia {
+        margin-top: 60px;
+    }
 
     img {
         &.footer__img {
@@ -148,6 +165,9 @@ footer {
     nav {
         @include flex-display(row, center, flex-start);
         margin: 0 auto;
+        @include thirdMedia {
+            @include flex-display(column, center, center);
+        }
         
         section {
             width: 100%;
@@ -159,8 +179,14 @@ footer {
             padding-top: 10px;
             @include firstMedia {
                 white-space: wrap;
-                height: 600px;
+                height: 350px;
             }        
+            @include thirdMedia {
+                @include flex-display(column, center, center);
+                border-left: none;
+                border-bottom: 1px solid $borderColor;
+                padding: 10px 0;
+            }
 
             article {
                 @include flex-display(column, flex-start, flex-start);
@@ -175,12 +201,32 @@ footer {
                     min-width: 169px;
                     padding: 25px;
                 }    
+                @include thirdMedia {
+                    width: 100%;
+                    padding: 0;
+                    @include flex-display(column, center, center);
+                }
                 
                 &.footer__social {
                     @include firstMedia {
                         white-space: nowrap;
                         @include flex-display(column, center, space-around);
-                    }            
+                    }        
+                    
+                    a {
+                        &.footer__media {
+                            display: none;
+                            @include thirdMedia {
+                                display: flex;
+                            }
+                        }
+                        
+                        &.footer__media--secondary {
+                            @include thirdMedia {
+                                display: none;
+                            }
+                        }
+                    }
                 }
 
                 h5 {

@@ -96,11 +96,24 @@ main .products {
   margin: 60px;
   box-sizing: border-box;
 }
+@media screen and (max-width: 50rem) {
+  main .products {
+    margin: 0 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
 main .products article {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+@media screen and (max-width: 50rem) {
+  main .products article {
+    width: 200px;
+    margin: 0 auto;
+  }
 }
 main .products div.card {
   height: 400px;
@@ -116,6 +129,11 @@ main .products div.card {
 main .products div.card:active {
   transform: scale(0.97);
 }
+@media screen and (max-width: 50rem) {
+  main .products div.card {
+    height: 320px;
+  }
+}
 main .products div.card-body {
   background-color: rgb(173, 234, 234);
 }
@@ -128,10 +146,20 @@ main .products div img {
   padding: 10px;
   box-sizing: border-box;
 }
+@media screen and (max-width: 50rem) {
+  main .products div img {
+    height: 200px;
+  }
+}
 
 footer {
   background-color: rgb(210, 211, 207);
   border-top: #6c757d 3px solid;
+}
+@media screen and (max-width: 50rem) {
+  footer {
+    margin-top: 60px;
+  }
 }
 footer img.footer__img {
   width: 52px;
@@ -154,6 +182,14 @@ footer nav {
   align-items: flex-start;
   margin: 0 auto;
 }
+@media screen and (max-width: 50rem) {
+  footer nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 footer nav section {
   width: 100%;
   height: 300px;
@@ -169,7 +205,18 @@ footer nav section {
 @media screen and (max-width: 88rem) {
   footer nav section {
     white-space: wrap;
-    height: 600px;
+    height: 350px;
+  }
+}
+@media screen and (max-width: 50rem) {
+  footer nav section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-left: none;
+    border-bottom: 1px solid #6c757d;
+    padding: 10px 0;
   }
 }
 footer nav section article {
@@ -191,6 +238,16 @@ footer nav section article {
     padding: 25px;
   }
 }
+@media screen and (max-width: 50rem) {
+  footer nav section article {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 @media screen and (max-width: 88rem) {
   footer nav section article.footer__social {
     white-space: nowrap;
@@ -198,6 +255,19 @@ footer nav section article {
     flex-direction: column;
     justify-content: center;
     align-items: space-around;
+  }
+}
+footer nav section article.footer__social a.footer__media {
+  display: none;
+}
+@media screen and (max-width: 50rem) {
+  footer nav section article.footer__social a.footer__media {
+    display: flex;
+  }
+}
+@media screen and (max-width: 50rem) {
+  footer nav section article.footer__social a.footer__media--secondary {
+    display: none;
   }
 }
 @media screen and (max-width: 88rem) {

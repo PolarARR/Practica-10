@@ -5,3 +5,7 @@
 @mixin secondMedia {
     @media screen and (max-width:60rem) { @content; }
 }
+
+@mixin thirdMedia {
+    @media screen and (max-width:50rem) { @content; }
+}
