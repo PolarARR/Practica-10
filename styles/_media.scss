@@ -9,3 +9,7 @@
 @mixin thirdMedia {
     @media screen and (max-width:50rem) { @content; }
 }
+
+@mixin fourthMedia {
+    @media screen and (max-width:35rem) { @content; }
+}
