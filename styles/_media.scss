@@ -1,0 +1,15 @@
+@mixin firstMedia {
+    @media screen and (max-width:88rem) { @content; }
+}
+
+@mixin secondMedia {
+    @media screen and (max-width:60rem) { @content; }
+}
+
+@mixin thirdMedia {
+    @media screen and (max-width:50rem) { @content; }
+}
+
+@mixin fourthMedia {
+    @media screen and (max-width:35rem) { @content; }
+}

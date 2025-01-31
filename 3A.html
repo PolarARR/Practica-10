@@ -13,7 +13,7 @@
 <body>
     <header>
         <section>
-            <img src="img/menu-icon.svg" alt="menu icon" class="header__img">
+            <img src="img/menu-icon.svg" alt="menu icon" class="header__img header__img--secondary">
         </section>
 
         <section>
@@ -44,7 +44,7 @@
         </section>
 
         <section class="filter">
-            <article>
+            <article class="filter__media--secondary">
                 <div class="dropdown">
                   <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Pagina Principal
@@ -52,8 +52,20 @@
                 
                   <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="index.html">Volver a la pagina principal</a></li>
+                    <li class="filter__media"><a class="dropdown-item" href="straight.html">Cabello Lacio</a></li>
+                    <li class="filter__media"><a class="dropdown-item" href="wavy.html">Cabello Ondulado</a></li>
+                    <li class="filter__media"><a class="dropdown-item" href="afro.html">Cabello Afro</a></li>
                   </ul>
                 </div>
+            </article>
+
+            <article class="filter__media">
+              <div class="btn-group">
+                  <a href="curly.html" class="btn btn-primary">Todos</a>
+                  <a href="3A.html" class="btn btn-primary active" aria-current="page">3A</a>
+                  <a href="3B.html" class="btn btn-primary">3B</a>
+                  <a href="3C.html" class="btn btn-primary">3C</a>
+              </div>
             </article>
 
           <article>
@@ -194,17 +206,20 @@
         </section>
 
         <section>
-          <article>
+          <article class="footer__social">
             <h5>Redes Sociales</h5>
-            <a href="#"><img src="img/facebook-icon.svg" alt="Facebook" class="footer__img--icon">
-            Facebook</a>
-
-            <a href="#"><img src="img/instagram-icon.svg" alt="Instagram" class="footer__img--icon">
-            Instagram</a>
-
-            <a href="#"><img src="img/twitter-icon.svg" alt="Twitter" class="footer__img--icon">
-            Twitter</a>
-          </article>
+            <a href="#" class="footer__media--secondary"><img src="img/facebook-icon.svg" alt="Facebook" class="footer__img--icon">
+              Facebook</a>
+              <a href="#" class="footer__media"><img src="img/facebook-icon.svg" alt="Facebook" class="footer__img--icon"></a>
+  
+              <a href="#" class="footer__media--secondary"><img src="img/instagram-icon.svg" alt="Instagram" class="footer__img--icon">
+              Instagram</a>
+              <a href="#" class="footer__media"><img src="img/instagram-icon.svg" alt="Instagram" class="footer__img--icon"></a>
+  
+              <a href="#" class="footer__media--secondary"><img src="img/twitter-icon.svg" alt="Twitter" class="footer__img--icon">
+              Twitter</a>
+              <a href="#" class="footer__media"><img src="img/twitter-icon.svg" alt="Twitter" class="footer__img--icon"></a>
+            </article>
         </section>
 
         <section>

@@ -1,7 +1,11 @@
 @import "./base";
+@import "./media";
 body {
     @extend %defaultFont;
     box-sizing: border-box;
+    font-size: 16px;
+    width: 100%;
+    height: 100%;
 }
 
 header {
@@ -10,10 +14,16 @@ header {
     margin: 0;
     padding: 0 50px;
     width: 100%;
+    @include fourthMedia {
+        padding: 0 25px;
+    }
 
     section {
+        width: 25%;
+        @include flex-display(row, center, flex-start);
+
         &.header__icons {
-            @include flex-display(row, space-between, center);
+            @include flex-display(row, flex-end, center);
             gap: 20px;
         }
 
@@ -23,11 +33,22 @@ header {
                 height: 24px;
                 @include hover (false);
                 @include active (false);
+                @include fourthMedia {
+                    width: 20px;
+                } 
+            }
+
+            &.header__img--secondary {
+                margin-right: auto;
             }
 
             &.header__logo {
                 width: 72px;
                 height: 72px;
+                @include fourthMedia {
+                    width: 60px;
+                    height: 60px;
+                } 
             }
         }
     }
@@ -37,6 +58,9 @@ main {
     .banner {
         height: 336px;
         overflow: hidden;
+        @include fourthMedia {
+            height: 200px;
+        }
 
         img {
             width: 100%;
@@ -50,22 +74,69 @@ main {
         gap: 20px;
         padding: 15px 0;
         background-color:$background;
+
+        .filter__media {
+            display: none;
+            @include secondMedia {
+                display: flex;
+            }
+        }
+
+        .filter__media--secondary {
+            display: flex;
+        }
+
+        a {
+            @include fourthMedia {
+                font-size: 12px;
+            } 
+        }
+
+        article {
+            @include secondMedia {
+                display: none;
+            }
+
+            .btn-group {
+                a {
+                    background-color: $borderColor;
+                    border: $borderColor;           
+
+                    &.active {
+                        background-color: $btnColor;
+                        border: $btnColor;
+                    }
+                }
+            }
+        }
     }
 
     h2 {
         margin: 60px auto 35px auto;
         text-align: center;
+        @include fourthMedia {
+            margin: 30px auto 20px auto;
+            font-size: 22px;
+            padding: 10px 20px;
+        }
     }
 
     .products {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+        @include grid-display(270px, 1fr);
         gap: 35px;
         margin: 60px;
         box-sizing: border-box;
+        @include thirdMedia {
+            margin: 0 30px;
+            @include grid-display(180px, 1fr);
+        }
 
         article {
             @include flex-display(row, center, center);
+            @include thirdMedia {
+                width: 200px;
+                margin: 0 auto ;
+            }
         }
                 
         div {
@@ -73,6 +144,9 @@ main {
                 height: 400px;
                 @include hover (true);
                 @include active (true);
+                @include thirdMedia {
+                    height: 320px;
+                }
             }
 
             &.card-body {
@@ -88,6 +162,9 @@ main {
                 height: 286px;
                 padding: 10px;
                 box-sizing: border-box;
+                @include thirdMedia {
+                    height: 200px;
+                }
             }
         }
     }
@@ -96,6 +173,9 @@ main {
 footer {
     background-color: $background;
     border-top: $borderColor 3px solid;
+    @include thirdMedia {
+        margin-top: 60px;
+    }
 
     img {
         &.footer__img {
@@ -118,6 +198,9 @@ footer {
     nav {
         @include flex-display(row, center, flex-start);
         margin: 0 auto;
+        @include thirdMedia {
+            @include flex-display(column, center, center);
+        }
         
         section {
             width: 100%;
@@ -127,6 +210,16 @@ footer {
             @include flex-display(column, flex-start, center);
             box-sizing: border-box;
             padding-top: 10px;
+            @include firstMedia {
+                white-space: wrap;
+                height: 350px;
+            }        
+            @include thirdMedia {
+                @include flex-display(column, center, center);
+                border-left: none;
+                border-bottom: 1px solid $borderColor;
+                padding: 10px 0;
+            }
 
             article {
                 @include flex-display(column, flex-start, flex-start);
@@ -135,6 +228,45 @@ footer {
                 font-size: 14px;
                 white-space: nowrap;
                 box-sizing: border-box;
+                @include firstMedia {
+                    white-space: wrap;
+                    width: 100%;
+                    min-width: 169px;
+                    padding: 25px;
+                }    
+                @include thirdMedia {
+                    width: 100%;
+                    padding: 0;
+                    @include flex-display(column, center, center);
+                }
+                
+                &.footer__social {
+                    @include firstMedia {
+                        white-space: nowrap;
+                        @include flex-display(column, center, space-around);
+                    }        
+                    
+                    a {
+                        &.footer__media {
+                            display: none;
+                            @include thirdMedia {
+                                display: flex;
+                            }
+                        }
+                        
+                        &.footer__media--secondary {
+                            @include thirdMedia {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+
+                h5 {
+                    @include firstMedia {
+                        white-space: wrap;
+                    }
+                }
             }
         }
     }

@@ -4,8 +4,15 @@ $cardsBackground: rgb(173, 234, 234);
 
 $borderColor:#6c757d;
 
+$btnColor:rgb(94, 178, 149);
+
 %defaultFont {
     font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+@mixin grid-display ($min, $max){
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax($min, $max));
 }
 
 @mixin flex-display ($direction, $justify, $align){
