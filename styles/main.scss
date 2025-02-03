@@ -137,6 +137,31 @@ main {
                 width: 200px;
                 margin: 0 auto ;
             }
+            &.products__carousel {
+                @include flex-display(column, center, center);
+                grid-column: span 2;
+                border: 2px solid $borderColor;
+                width: 93.5%;
+                height: 100%;
+                margin: auto;
+                @include thirdMedia {
+                    display: none;
+                }
+                
+                .carousel {
+                    width: 100%;
+                    margin: 0 auto;
+                }
+
+                .accordion {
+                    width: 100%;
+                }
+
+                img {
+                    object-fit: cover;
+                    padding: 0;
+                }
+            }
         }
                 
         div {
